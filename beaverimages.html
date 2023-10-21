@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaver Images</title>
+    <style>
+        body {
+            background-image: url('assets/pictures/Beaver_dam2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .slideshow-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Place the button below the images */
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        .slideshow-image {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0 auto;
+        }
+        .return-button {
+            margin-top: 20px; /* Add space between images and the button */
+            text-align: center;
+        }
+        .return-button a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .return-button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <img class="slideshow-image" src="assets/pictures/Beaver1.jpg" alt="Beaver 1">
+        <img class="slideshow-image" src="assets/pictures/Beaver2.jpg" alt="Beaver 2">
+        <img class="slideshow-image" src="assets/pictures/beaver3.jpg" alt="Beaver 3">
+        <!-- Add more images for the slideshow as needed -->
+
+        <div class="return-button">
+            <a href="index.html">Back to Front Page</a>
+        </div>
+    </div>
+
+    <script>
+        var currentIndex = 0;
+        var images = document.querySelectorAll('.slideshow-image');
+
+        function showImage(index) {
+            images.forEach(function(image) {
+                image.style.display = 'none';
+            });
+            images[index].style.display = 'block';
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Display the first image
+        showImage(currentIndex);
+
+        // Start the slideshow (change images every 3 seconds)
+        setInterval(nextImage, 3000);
+    </script>
+</body>
+</html>
