@@ -1,0 +1,44 @@
+/* Styles for the quiz game in quiz.css */
+.quiz-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.quiz-container h1 {
+    background-color: #006bd5;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.quiz-container .question p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.quiz-container .answer button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz-container .yes {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.quiz-container .no {
+    background-color: #F44336;
+    color: white;
+}
+
+.quiz-container .result p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #006bd5;
+}
