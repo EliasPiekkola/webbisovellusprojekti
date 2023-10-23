@@ -23,14 +23,26 @@
     
     <div class="result">
         <p id="response"></p>
-    </div>
-    
-    <div class="result">
-        <p id="response"></p>
         <img id="beaver-image" src="" alt="">
     </div>
     
-
-    
+    <div class="timer">
+        <p id="timer-text">Redirecting in <span id="timer-countdown">10</span> seconds</p>
+    </div>
 </body>
+
+<script>
+    var countdown = 10;
+
+    // Function to update the countdown and redirect
+    function updateCountdown() {
+        countdown--;
+        document.getElementById("timer-countdown").textContent = countdown;
+        if (countdown <= 0) {
+            window.location.href = "index.html"; 
+        }
+    }
+    var countdownInterval = setInterval(updateCountdown, 1000);
+
+</script>
 </html>
