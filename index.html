@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All About Beavers</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="quiz_script.js"></script>
 </head>
 <body>
     <header>
@@ -50,7 +51,18 @@
         <h2>Pictures</h2>
         <p>Explore these images of beavers in their natural habitat:</p>
         <a href="beaverimages.html">Click here to see the pictures</a>
-    </section>
+    </section>        
+    <button id="bober-button"> Click me Bober</button>
+
+    <script>
+        // Add a click event listener to the "Bober" button
+        document.getElementById("bober-button").addEventListener("click", function() {
+            // Display an alert when the button is clicked
+            alert("Bober says hello!");
+        });
+    </script>
+ 
+
 
     <footer>
         <p>&copy; 2023 All About Beavers</p>
